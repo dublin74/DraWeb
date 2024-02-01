@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 });
 
 const CONNECTION_URL =
-  "mongodb+srv://agoodrich:1234Naya@drawing.assf0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "Enter your MongoDB connection URL here";
 
 const PORT = process.env.PORT || 8080;
 
