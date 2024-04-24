@@ -23,8 +23,7 @@ app.get("/", (req, res) => {
   res.send("<h1>Hello World!</h1>");
 });
 
-const CONNECTION_URL =
-  "Enter your MongoDB connection URL here";
+const CONNECTION_URL = process.env.CONNECTION_URL;
 
 const PORT = process.env.PORT || 8080;
 
