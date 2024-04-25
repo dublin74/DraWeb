@@ -13,7 +13,7 @@ const ShowUser = (props) => {
   const [activeDrawing, setActiveDrawing] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/drawings").then((response) => {
+    axios.get("https://draweb.onrender.com/drawings").then((response) => {
       setDrawings(response.data);
     });
   }, []);
@@ -65,7 +65,7 @@ const ShowUser = (props) => {
   };
 
   const deleteDrawing = (id) => {
-    axios.delete(`http://localhost:8080/drawings/${id}`).then((response) => {
+    axios.delete(`https://draweb.onrender.com/drawings/${id}`).then((response) => {
       window.location.reload(false);
     });
   };
@@ -80,7 +80,7 @@ const ShowUser = (props) => {
       title: drawingTitle,
       usersWithAccess: [...currentAuthorizedUsers],
     };
-    axios.post("http://localhost:8080/drawings", drawing).then((response) => {
+    axios.post("https://draweb.onrender.com/drawings", drawing).then((response) => {
       alert("Drawing saved!");
       window.location.reload(false);
     });
@@ -95,7 +95,7 @@ const ShowUser = (props) => {
       usersWithAccess: [...currentAuthorizedUsers],
     };
     axios
-      .put(`http://localhost:8080/drawings/${id}`, drawing)
+      .put(`https://draweb.onrender.com/drawings/${id}`, drawing)
       .then((response) => {
         alert("Drawing updated!");
       });

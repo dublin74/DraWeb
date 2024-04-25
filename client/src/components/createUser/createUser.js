@@ -29,7 +29,7 @@ const CreateUser = (props) => {
     } else if (user.username.length < 3) {
       return;
     }
-    axios.post("http://localhost:8080/users", user).then((response) => {
+    axios.post("https://draweb.onrender.com/users", user).then((response) => {
       console.log(response);
     });
   };

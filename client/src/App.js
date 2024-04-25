@@ -24,7 +24,7 @@ function App() {
   const [showMainModal, setShowMainModal] = useState(false);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/users").then((allUsers) => {
+    axios.get("https://draweb.onrender.com/users").then((allUsers) => {
       setUserList(allUsers.data);
     });
     if (localStorage.getItem("userLoggedIn") === "true") {
