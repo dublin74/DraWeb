@@ -130,7 +130,7 @@ dist
 .pnp.*
 
 
-./client/build
+./client/build/*
 
 ./client/node_modules
 ./server/node_modules
